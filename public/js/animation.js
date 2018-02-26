@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
     $(function animation() {
         var emailPasswordLeave = 'animate bounceOutLeft';
         var userDetailsJoin = 'animate bounceInRight';
