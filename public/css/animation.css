@@ -1,0 +1,15 @@
+#emailPassword {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+}
+
+#userDetails {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+}
+
+.hidden {
+    display: none;
+}

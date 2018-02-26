@@ -449,7 +449,7 @@ ul.cd-hero-slider {
 	background-color: #fff;
 }
 
-#blog .pop, .pop2, .pop3 {
+#blog .pop, .pop2, .pop3, .pop4, .pop5, .pop6, .pop7, .pop8 {
 	background-color: #fff;
 }
 
@@ -493,7 +493,7 @@ ul.cd-hero-slider {
 	margin-right: 5px;
 }
 
-.pop, .pop2, .pop3 {
+.pop, .pop2, .pop3, .pop4, .pop5, .pop6, .pop7, .pop8 {
 	z-index: 9999;
 	text-align: center;
 	padding: 30px;
@@ -506,7 +506,7 @@ ul.cd-hero-slider {
     box-shadow: 0px 0px 25px #7a7a7a;
 }
 
-.pop span, .pop2 span, .pop3 span {
+.pop span, .pop2 span, .pop3 span, .pop4 span, .pop5 span, .pop6 span, .pop7 span, .pop8 span {
 	margin-bottom: 20px;
 	cursor: pointer;
 	width: 44px;
@@ -518,7 +518,7 @@ ul.cd-hero-slider {
 	background-color: #a2cf8d;
 }
 
-.pop span:hover, .pop2 span:hover, .pop3 span:hover {
+.pop span:hover, .pop2 span:hover, .pop3 span:hover, .pop4 span:hover, .pop5 span:hover, .pop6 span:hover, .pop7 span:hover, .pop8 span:hover {
 	background-color: #5c9d7d;
 	transition: all 0.5s;
 }

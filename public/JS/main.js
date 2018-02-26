@@ -1,3 +1,39 @@
+
+jQuery(document).ready(function() {
+    
+    /*
+	    Modals
+	*/
+	$('.launch-modal').on('click', function(e){
+		e.preventDefault();
+		$( '#' + $(this).data('modal-id') ).modal();
+	});
+    
+    /*
+        Form validation
+    */
+	$('.login-form input[type="text"], .login-form input[type="password"], .login-form textarea').on('focus', function() {
+    	$(this).removeClass('input-error');
+    });
+    
+    $('.login-form').on('submit', function(e) {
+    	
+    	$(this).find('input[type="text"], input[type="password"], textarea').each(function(){
+    		if( $(this).val() == "" ) {
+    			e.preventDefault();
+    			$(this).addClass('input-error');
+    		}
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+    	
+    });
+    
+    
+});
+
+
 /* 
 
 Template 2089 Meteor
@@ -51,6 +87,31 @@ jQuery(document).ready(function($) {
             $(".pop3").fadeIn(300);
             
         });
+    
+        $(".b4").click(function () {
+            $(".pop4").fadeIn(300);
+            
+        });
+    
+        $(".b5").click(function () {
+            $(".pop5").fadeIn(300);
+            
+        });
+		
+		$(".b6").click(function () {
+            $(".pop6").fadeIn(300);
+            
+        });
+		
+		$(".b7").click(function () {
+            $(".pop7").fadeIn(300);
+            
+        });
+    
+        $(".b8").click(function () {
+            $(".pop8").fadeIn(300);
+            
+        });
 
         $(".pop > span, .pop").click(function () {
             $(".pop").fadeOut(300);
@@ -62,6 +123,26 @@ jQuery(document).ready(function($) {
 		
 		$(".pop3 > span, .pop3").click(function () {
             $(".pop3").fadeOut(300);
+        });
+    
+        $(".pop4 > span, .pop4").click(function () {
+            $(".pop4").fadeOut(300);
+        });
+    
+        $(".pop5 > span, .pop5").click(function () {
+            $(".pop5").fadeOut(300);
+        });
+		
+		$(".pop6 > span, .pop6").click(function () {
+            $(".pop6").fadeOut(300);
+        });
+		
+		$(".pop7 > span, .pop7").click(function () {
+            $(".pop7").fadeOut(300);
+        });
+    
+        $(".pop8 > span, .pop8").click(function () {
+            $(".pop8").fadeOut(300);
         });
 
 
