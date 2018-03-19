@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/fontAwesome2.css">
         <link rel="stylesheet" href="css/hero-slider2.css">
         <link rel="stylesheet" href="css/tooplate-style2.css">
+        <link rel="stylesheet" href="css/map.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
@@ -208,8 +209,29 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="left-text">
-                        <h4>New offers just arrived,<br>Get it now and take profit.</h4>
-                        <p>Gochujang pitchfork post-ironic hammock kombucha fanny pack cronut. Raw denim chicharrones semiotics af truffaut pinterest. Distillery letterpress authentic adaptogen. Meditation schlitz humblebrag photo booth celiac cliche chartreuse.<br><br>Pinterest 90's wolf celiac dreamcatcher listicle deep v semiotics. Intelligentsia literally meggings trust fund put a bird on it. Shoreditch crucifix artisan pug shaman twee. Health goth bicycle rights retro iPhone.</p>
+                        <h4>Create a quick quote below.<br>Choose from a list of locations to create a route.</h4><br>
+                        <h3>Departure:</h3>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Swindon
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a>Heathrow</a></li>
+                                <li><a>Gatwick</a></li>
+                                <li><a>Stanstead</a></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <h3>Destination:</h3>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Swindon
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Heathrow</a></li>
+                                <li><a href="#">Gatwick</a></li>
+                                <li><a href="#">Stanstead</a></li>
+                            </ul>
+                        </div>
+                        <br><br>
                         <ul>
                             <li>
                                 <div class="white-button">
@@ -225,9 +247,17 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="right-image">
-                        <img src="img/what-we-do-right-image.png" alt="">
-                    </div>
+                    <div id="map"></div>
+                        <script>
+                          function initMap() {
+                            // Create a map object and specify the DOM element for display.
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                              center: {lat: -34.397, lng: 150.644},
+                              zoom: 8
+                            });
+                          }
+
+                    </script>
                 </div>
             </div>
         </div>
