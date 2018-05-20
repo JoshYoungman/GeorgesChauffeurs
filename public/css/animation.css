@@ -10,6 +10,18 @@
     -webkit-animation-iteration-count: 1;
 }
 
+#carType {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+}
+
+#locations {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+}
+
 .hidden {
     display: none;
 }

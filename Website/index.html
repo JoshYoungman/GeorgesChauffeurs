@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/fontAwesome2.css">
         <link rel="stylesheet" href="css/hero-slider2.css">
         <link rel="stylesheet" href="css/tooplate-style2.css">
+        <link rel="stylesheet" href="css/map.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
@@ -45,8 +46,6 @@
                         <li><a href="#" class="scroll-link" data-id="about">About Us</a></li>
                         <li><a href="#" class="scroll-link" data-id="fleet">Our Fleet</a></li>
                         <li><a href="#" class="scroll-link" data-id="blog">Events</a></li>
-                        <li><a href="#" class="scroll-link" data-id="contact">Contact Us</a></li>
-                        <li><a href="/sign-in">Sign In</a></li>
                     </ul>
                 </div>
                 <!--/.navbar-collapse-->
@@ -203,31 +202,239 @@
         </div>
     </div>
 
-    <div id="what-we-do">
+    <div id="quote">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="left-text">
-                        <h4>New offers just arrived,<br>Get it now and take profit.</h4>
-                        <p>Gochujang pitchfork post-ironic hammock kombucha fanny pack cronut. Raw denim chicharrones semiotics af truffaut pinterest. Distillery letterpress authentic adaptogen. Meditation schlitz humblebrag photo booth celiac cliche chartreuse.<br><br>Pinterest 90's wolf celiac dreamcatcher listicle deep v semiotics. Intelligentsia literally meggings trust fund put a bird on it. Shoreditch crucifix artisan pug shaman twee. Health goth bicycle rights retro iPhone.</p>
+                        <h4>Create a quick quote below.<br>Choose from a list of locations to create a route.</h4><br>
+                        <!--<h3>Departure:</h3>-->
+                        <div class="form-group">
+                            <label for="departure">Departure:</label>
+                            <select class="form-control" id="departure">
+                                <option id="Swindon (Central)" data-surcharge="10" onclick="quickQuote()">Swindon (Central)</option>
+                                <option disabled="disabled">-----------------</option>
+                                <option id="Aldbourne" data-surcharge="10" onclick="quickQuote()">Aldbourne</option>
+                                <option value="Ashton Keynes" data-surcharge="15">Ashton Keynes</option>
+                                <option value="Avebury" data-surcharge="10">Avebury</option>
+                                <option value="Badbury" data-surcharge="5">Badbury</option>
+                                <option value="Baydon" data-surcharge="10">Baydon</option>
+                                <option value="Bourton" data-surcharge="5">Bourton</option>
+                                <option value="Bourton On The Water" data-surcharge="30">Bourton On The Water</option>
+                                <option value="Brinkworth" data-surcharge="10">Brinkworth</option>
+                                <option value="Broad Hinton" data-surcharge="10">Broad Hinton</option>
+                                <option value="Broad Town" data-surcharge="10">Broad Town</option>
+                                <option value="Burderstone" data-surcharge="6">Burderstone</option>
+                                <option value="Cheltenham" data-surcharge="40">Cheltenham</option>
+                                <option value="Chippenham" data-surcharge="25">Chippenham</option>
+                                <option value="Cirencester" data-surcharge="20">Cirencester</option>
+                                <option value="Cricklade" data-surcharge="10">Cricklade</option>
+                                <option value="Drycott Foliat" data-surcharge="5">Drycott Foliat</option>
+                                <option value="Fairford" data-surcharge="15">Fairford</option>
+                                <option value="Faringdon" data-surcharge="6">Faringdon</option>
+                                <option value="Hannington" data-surcharge="5">Hannington</option>
+                                <option value="Highworth" data-surcharge="5">Highworth</option>
+                                <option value="Honton Parva" data-surcharge="15">Honton Parva</option>
+                                <option value="Hungerford" data-surcharge="10">Hungerford</option>
+                                <option value="Kempsford" data-surcharge="20">Kempsford</option>
+                                <option value="Lambourn" data-surcharge="10">Lambourn</option>
+                                <option value="Latton" data-surcharge="15">Latton</option>
+                                <option value="Lechlade" data-surcharge="20">Lechlade</option>
+                                <option value="Longcot" data-surcharge="15">Longcot</option>
+                                <option value="Lyneham" data-surcharge="20">Lyneham</option>
+                                <option value="Malmesbury" data-surcharge="20">Malmesbury</option>
+                                <option value="Marlborough" data-surcharge="10">Marlborough</option>
+                                <option value="Minety" data-surcharge="10">Minety</option>
+                                <option value="Newbury" data-surcharge="25">Newbury</option>
+                                <option value="Purton" data-surcharge="5">Purton</option>
+                                <option value="Ramsbury" data-surcharge="15">Ramsbury</option>
+                                <option value="Royal Wootten Bassett" data-surcharge="5">Royal Wootten Bassett</option>
+                                <option value="Salthrop" data-surcharge="5">Salthrop</option>
+                                <option value="Sevenhampton" data-surcharge="5">Sevenhampton</option>
+                                <option value="Shrivenham" data-surcharge="6">Shrivenham</option>
+                                <option value="South Cerney" data-surcharge="15">South Cerney</option>
+                                <option value="Tockenham" data-surcharge="6">Tockenham</option>
+                                <option value="Uffcott" data-surcharge="6">Uffcott</option>
+                                <option disabled="disabled">-----------------</option>
+                                <optgroup label="Airports" class="ui-state-active">
+                                    <option value="Birmingham Airport" data-surcharge="110">Birmingham Airport</option>
+                                    <option value="Bournemouth Airport" data-surcharge="90">Bournemouth Airport</option>
+                                    <option value="Bristol Airport" data-surcharge="75">Bristol Airport</option>
+                                    <option value="Cardiff Airport" data-surcharge="105">Cardiff Airport</option>
+                                    <option value="Gatwick Airport (North)" data-surcharge="115">Gatwick Airport (North)</option>
+                                    <option value="Gatwick Aiport (South)" data-surcharge="115">Gatwick Aiport (South)</option>
+                                    <option value="Heathrow Aiport (T1)" data-surcharge="85">Heathrow Aiport (T1)</option>
+                                    <option value="Heathrow Airport (T2)" data-surcharge="85">Heathrow Airport (T2)</option>
+                                    <option value="Heathrow Airport (T3)" data-surcharge="85">Heathrow Airport (T3)</option>
+                                    <option value="Heathrow Airport (T4)" data-surcharge="85">Heathrow Airport (T4)</option>
+                                    <option value="Heathrow Airport (T5)" data-surcharge="85">Heathrow Airport (T5)</option>
+                                    <option value="London Central" data-surcharge="135">London Central</option>
+                                    <option value="London City Aiport" data-surcharge="150">London City Airport</option>
+                                    <option value="Luton Airport" data-surcharge="115">Luton Airport</option>
+                                    <option value="Manchester Aiport" data-surcharge="180">Manchester Aiport</option>
+                                    <option value="Southampton Airport" data-surcharge="85">Southampton Airport</option>
+                                    <option value="Stansted Airport" data-surcharge="150">Stansted Airport</option>
+                                </optgroup>
+                                <optgroup label="Seaside Resorts" class="ui-state-active">
+                                    <option value="Bideford" data-surcharge="170">Bideford</option>
+                                    <option value="Blackpool" data-surcharge="225">Blackpool</option>
+                                    <option value="Bognor Regis" data-surcharge="125">Bognor Regis</option>
+                                    <option value="Bournemouth" data-surcharge="110">Bournemouth</option>
+                                    <option value="Brighton" data-surcharge="150">Brighton</option>
+                                    <option value="Exmouth" data-surcharge="145">Exmouth</option>
+                                    <option value="Great Yarmouth" data-surcharge="225">Great Yarmouth</option>
+                                    <option value="Minehead" data-surcharge="120">Minehead</option>
+                                    <option value="Newquay" data-surcharge="215">Newquay</option>
+                                    <option value="Plymouth" data-surcharge="195">Plymouth</option>
+                                    <option value="Poole" data-surcharge="120">Poole</option>
+                                    <option value="Skegness" data-surcharge="185">Skegness</option>
+                                    <option value="Southend On Sea" data-surcharge="155">Southend On Sea</option>
+                                    <option value="Torquay" data-surcharge="155">Torquay</option>
+                                    <option value="Weston Super Mare" data-surcharge="95">Weston Super Mare</option>
+                                    <option value="Weymouth" data-surcharge="105">Weymouth</option>
+                                </optgroup>
+                                <optgroup label="Cruise Terminals" class="ui-state-active">
+                                    <option value="Channel Tunnel" data-surcharge="180">Channel Tunnel</option>
+                                    <option value="Dover" data-surcharge="185">Dover</option>
+                                    <option value="Folkeston" data-surcharge="180">Folkeston</option>
+                                    <option value="Harwich" data-surcharge="195">Harwich</option>
+                                    <option value="Portsmouth" data-surcharge="110">Portsmouth</option>
+                                    <option value="Southampton" data-surcharge="90">Southampton</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="destination">Destination:</label>
+                            <select class="form-control" id="destination">
+                                <option value="Please Select" data-price="0">Please Select</option>
+                                <option disabled="disabled">-----------------</option>
+                                <optgroup label="Airports" class="ui-state-active">
+                                    <option value="Birmingham Airport" data-price="100" onclick="quickQuote()">Birmingham Airport</option>
+                                    <option value="Bournemouth Airport" data-price="90">Bournemouth Airport</option>
+                                    <option value="Bristol Airport" data-price="75">Bristol Airport</option>
+                                    <option value="Cardiff Airport" data-price="105">Cardiff Airport</option>
+                                    <option value="Gatwick Airport (North)" data-price="115">Gatwick Airport (North)</option>
+                                    <option value="Gatwick Aiport (South)" data-price="115">Gatwick Aiport (South)</option>
+                                    <option value="Heathrow Aiport (T1)" data-price="85">Heathrow Aiport (T1)</option>
+                                    <option value="Heathrow Airport (T2)" data-price="85">Heathrow Airport (T2)</option>
+                                    <option value="Heathrow Airport (T3)" data-price="85">Heathrow Airport (T3)</option>
+                                    <option value="Heathrow Airport (T4)" data-price="85">Heathrow Airport (T4)</option>
+                                    <option value="Heathrow Airport (T5)" data-price="85">Heathrow Airport (T5)</option>
+                                    <option value="London Central" data-price="135">London Central</option>
+                                    <option value="London City Airport" data-price="150">London City Airport</option>
+                                    <option value="Luton Airport" data-price="115">Luton Airport</option>
+                                    <option value="Manchester Aiport" data-price="180">Manchester Aiport</option>
+                                    <option value="Southampton Airport" data-price="85">Southampton Airport</option>
+                                    <option value="Stansted Airport" data-price="150">Stansted Airport</option>
+                                </optgroup>
+                                <optgroup label="Seaside Resorts" class="ui-state-active">
+                                    <option value="Bideford" data-price="170">Bideford</option>
+                                    <option value="Blackpool" data-price="225">Blackpool</option>
+                                    <option value="Bognor Regis" data-price="125">Bognor Regis</option>
+                                    <option value="Bournemouth" data-price="110">Bournemouth</option>
+                                    <option value="Brighton" data-price="150">Brighton</option>
+                                    <option value="Exmouth" data-price="145">Exmouth</option>
+                                    <option value="Great Yarmouth" data-price="225">Great Yarmouth</option>
+                                    <option value="Minehead" data-price="120">Minehead</option>
+                                    <option value="Newquay" data-price="215">Newquay</option>
+                                    <option value="Plymouth" data-price="195">Plymouth</option>
+                                    <option value="Poole" data-price="120">Poole</option>
+                                    <option value="Skegness" data-price="185">Skegness</option>
+                                    <option value="Southend On Sea" data-price="155">Southend On Sea</option>
+                                    <option value="Torquay" data-price="155">Torquay</option>
+                                    <option value="Weston Super Mare" data-price="95">Weston Super Mare</option>
+                                    <option value="Weymouth" data-price="105">Weymouth</option>
+                                </optgroup>
+                                <optgroup label="Cruise Terminals" class="ui-state-active">
+                                    <option value="Channel Tunnel" data-price="180">Channel Tunnel</option>
+                                    <option value="Dover" data-price="185">Dover</option>
+                                    <option value="Folkeston" data-price="180">Folkeston</option>
+                                    <option value="Harwich" data-price="180">Harwich</option>
+                                    <option value="Portsmouth" data-price="110">Portsmouth</option>
+                                    <option value="Southampton" data-price="90">Southampton</option>
+                                </optgroup>
+                                <optgroup label="Return Journey Pickups" class="ui-state-active">
+                                    <option value="Swindon (Central)" data-price="10">Swindon (Central)</option>
+                                    <option value="Aldbourne" data-price="20">Aldbourne</option>
+                                    <option value="Ashton Keynes" data-price="25">Ashton Keynes</option>
+                                    <option value="Avebury" data-price="20">Avebury</option>
+                                    <option value="Badbury" data-price="15">Badbury</option>
+                                    <option value="Baydon" data-price="20">Baydon</option>
+                                    <option value="Bourton" data-price="15">Bourton</option>
+                                    <option value="Bourton On The Water" data-price="40">Bourton On The Water</option>
+                                    <option value="Brinkworth" data-price="20">Brinkworth</option>
+                                    <option value="Broad Hinton" data-price="20">Broad Hinton</option>
+                                    <option value="Broad Town" data-price="20">Broad Town</option>
+                                    <option value="Burderstone" data-price="16">Burderstone</option>
+                                    <option value="Cheltenham" data-price="50">Cheltenham</option>
+                                    <option value="Chippenham" data-price="35">Chippenham</option>
+                                    <option value="Cirencester" data-price="30">Cirencester</option>
+                                    <option value="Cricklade" data-price="20">Cricklade</option>
+                                    <option value="Drycott Foliat" data-price="15">Drycott Foliat</option>
+                                    <option value="Fairford" data-price="25">Fairford</option>
+                                    <option value="Faringdon" data-price="25">Faringdon</option>
+                                    <option value="Hannington" data-price="16">Hannington</option>
+                                    <option value="Highworth" data-price="15">Highworth</option>
+                                    <option value="Honton Parva" data-price="15">Honton Parva</option>
+                                    <option value="Hungerford" data-price="25">Hungerford</option>
+                                    <option value="Kempsford" data-price="20">Kempsford</option>
+                                    <option value="Lambourn" data-price="30">Lambourn</option>
+                                    <option value="Latton" data-price="20">Latton</option>
+                                    <option value="Lechlade" data-price="25">Lechlade</option>
+                                    <option value="Longcot" data-price="20">Longcot</option>
+                                    <option value="Lyneham" data-price="25">Lyneham</option>
+                                    <option value="Malmesbury" data-price="30">Malmesbury</option>
+                                    <option value="Marlborough" data-price="20">Marlborough</option>
+                                    <option value="Minety" data-price="20">Minety</option>
+                                    <option value="Newbury" data-price="35">Newbury</option>
+                                    <option value="Purton" data-price="15">Purton</option>
+                                    <option value="Ramsbury" data-price="25">Ramsbury</option>
+                                    <option value="Royal Wootten Bassett" data-price="15">Royal Wootten Bassett</option>
+                                    <option value="Salthrop" data-price="15">Salthrop</option>
+                                    <option value="Sevenhampton" data-price="15">Sevenhampton</option>
+                                    <option value="Shrivenham" data-price="16">Shrivenham</option>
+                                    <option value="South Cerney" data-price="25">South Cerney</option>
+                                    <option value="Tockenham" data-price="16">Tockenham</option>
+                                    <option value="Uffcott" data-price="16">Uffcott</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div id="price">
+                                    <h3>Your Price: </h3>
+                                    <h3><div id="quotedPrice"></div></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
                         <ul>
                             <li>
                                 <div class="white-button">
-                                    <a href="#" class="scroll-link" data-id="portfolio">Discover More</a>
+                                    <a href="advanced-quote.html">Advanced Quote</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="primary-button">
-                                    <a href="#">Purchase Now</a>
+                                    <a href="car-select.html">Purchase Now</a>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="right-image">
-                        <img src="img/what-we-do-right-image.png" alt="">
-                    </div>
+                    <div id="map"></div>
+                        <script>
+                          function initMap() {
+                            // Create a map object and specify the DOM element for display.
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                              center: {lat: -34.397, lng: 150.644},
+                              zoom: 8
+                            });
+                          }
+
+                    </script>
                 </div>
             </div>
         </div>
@@ -281,101 +488,6 @@
                         <p>A flexible interior with multiple seat configurations makes the Mercedes-Benz V-Class a comfortable MPV that ticks all the boxes: spacious, ergonomic, functional and attractive.</p>
                     </div>
                 </div>
-                <!--<div class="projects-holder-3">
-                    <div class="filter-categories">
-                        <ul class="project-filter">
-                            <li class="filter" data-filter="all"><span>All</span></li>
-                            <li class="filter" data-filter="nature"><span>Nature</span></li>
-                            <li class="filter" data-filter="workspace"><span>Workspace</span></li>
-                            <li class="filter" data-filter="city"><span>City</span></li>
-                            <li class="filter" data-filter="technology"><span>Technology</span></li>
-                        </ul>
-                    </div>
-                    <div class="projects-holder">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6 project-item mix workspace">
-                              <div class="thumb">
-                                  <div class="image">
-                                    <img src="img/portfolio_01.jpg">
-                                  </div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_01.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix workspace">
-                              <div class="thumb">
-                                  <div class="image">
-                                    <img src="img/portfolio_02.jpg">
-                                  </div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_02.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix technology">
-                              <div class="thumb">
-                                  <div class="image">
-                                    <img src="img/portfolio_03.jpg">
-                                  </div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_03.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix city">
-                              <div class="thumb">
-                                  <div class="image">
-                                    <img src="img/portfolio_04.jpg">
-                                  </div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_04.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix nature">
-                              <div class="thumb">
-                                  <div class="image">
-                                    <img src="img/portfolio_05.jpg">
-                                  </div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_05.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix technology">
-                              <div class="thumb">
-                                  <div class="image">
-                                    <img src="img/portfolio_06.jpg">
-                                  </div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_06.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix workspace">
-                              <div class="thumb">
-                                  <div class="image">
-                                    <img src="img/portfolio_07.jpg">
-                                  </div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_07.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix city">
-                              <div class="thumb">
-                                  <div class="image">
-                                    <img src="img/portfolio_08.jpg">
-                                  </div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_08.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
             </div>
         </div> 
     </div>
@@ -511,98 +623,6 @@
             </div>
         </div>
     </div>
-
-    <div id="fun-facts">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="fact-item">
-                        <div class="counter" data-count="926">0</div>
-                        <span>Regular Visitors</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="fact-item">
-                        <div class="counter" data-count="214">0</div>
-                        <span>Finished Projects</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="fact-item">
-                        <div class="counter" data-count="118">0</div>
-                        <span>Happy Clients</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="fact-item">
-                        <div class="counter" data-count="16">0</div>
-                        <span>Total Awards</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="contact" class="page-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading">
-                        <h4>Contact Us</h4>
-                        <div class="line-dec"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="map">
-                        <script>
-                            function initMap() {
-                                var gc = {lat: -1.8262665, lng: 51.5504783};
-                                var map = new google.maps.Map(document.getElementById('map'), {
-                                    zoom: 4,
-                                    center: gc
-                                });
-                                var marker = new google.maps.Marker({
-                                    position: gc,
-                                    map: map
-                                });
-                            }
-                        </script>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                      <form id="contact" action="" method="post">
-                        <div class="col-md-6">
-                          <fieldset>
-                            <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                          </fieldset>
-                        </div>
-                        <div class="col-md-6">
-                          <fieldset>
-                            <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
-                          </fieldset>
-                        </div>
-                        <div class="col-md-12">
-                          <fieldset>
-                            <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                          </fieldset>
-                        </div>
-                        <div class="col-md-12">
-                          <fieldset>
-                            <button type="submit" id="form-submit" class="btn">Send Message</button>
-                          </fieldset>
-                        </div>
-                      </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <footer>
         <div class="container">
             <div class="row">
@@ -651,6 +671,7 @@
     <script src="js/plugins2.js"></script>
     <script src="js/scripts2.js"></script>
     <script src="js/vendor/bootstrap2.min.js"></script>
+    <script src="js/quickQuote.js"></script>
     
     
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrXkToM8vSl-fTkvqJJswXvzMtoMdzHzc&callback=initMap"></script>
