@@ -14,16 +14,20 @@ var producedQuote = function carType() {
     
     if(estate.checked) {
         quotedPrice = parseInt(givenPrice) + 5;
+        localStorage.setItem("carType", "Estate");
     } else if(exSaloon.checked) {
         quotedPrice = parseInt(givenPrice) + 15;
+        localStorage.setItem("carType", "Exec. Saloon");
     } else if(exEstate.checked) {
         quotedPrice = parseInt(givenPrice) + 20;
+        localStorage.setItem("carType", "Exec. Estate");
     } else if(saloon.checked) {
-        quotedPrice = parseInt(givenPrice)+ 0;
+        quotedPrice = parseInt(givenPrice) + 0;
+        localStorage.setItem("carType", "Saloon");
     }
     
     document.getElementById("quotedPrice").innerHTML = "Your Price: £" + quotedPrice;
-    document.getElementById("city").innerHTML = localStorage.getItem("location");
+    localStorage.setItem("price", quotedPrice);
 }
 
 saloon.onchange = producedQuote;
